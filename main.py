@@ -7,7 +7,10 @@ def get_book_text(filepath):
 
 def main():
     filepath="/home/alfred/workplace/github.com/lwc49/bookbot/books/frankenstein.txt"
-    print(f"{get_word_num(filepath)} words found in the document")
-    print(character_counter(filepath))
+    text=get_book_text(filepath)
+    word_numbers=get_word_num(text)
+    character_count=character_counter(text)
+    print(f"{word_numbers} words found in the document")
+    print(character_count)
 
 main()
